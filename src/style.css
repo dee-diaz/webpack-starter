@@ -8,6 +8,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  overflow-y: scroll;
 }
 
 body,
@@ -87,6 +88,13 @@ select {
 
 :target {
   scroll-margin-block: 5ex;
+}
+
+@supports (scrollbar-gutter: stable) {
+  html {
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
